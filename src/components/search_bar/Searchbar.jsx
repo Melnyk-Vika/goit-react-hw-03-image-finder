@@ -15,16 +15,16 @@ class Searchbar extends Component {
     this.setState({ searchQuery: value });
   };
 
-  setForm = ({ value }) => {
-    value = this.state.searchQuery;
-    this.setState({ searchQuery: value });
+  restForm = ({ value }) => {
+    
+    this.setState({ searchQuery: "" });
   };
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.setState({ searchQuery: event.target.value });
+   
     this.props.onSubmit(this.state.searchQuery);
-    this.setForm(event.target);
+    this.restForm();
   };
 
   render() {

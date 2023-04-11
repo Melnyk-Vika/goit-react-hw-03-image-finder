@@ -16,9 +16,7 @@ class ImageGallery extends Component {
   };
 
   showModal = (largeImage, alt) => {
-    this.setState({ isShowModal: true });
-    this.setState({ largeImage: largeImage });
-    this.setState({ alt: alt });
+    this.setState({ isShowModal: true, largeImage, alt });
   };
 
   hideModal = () => {
